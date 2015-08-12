@@ -1,0 +1,33 @@
+/*****************************************************************************/
+/* Sitlist: Style */
+/*****************************************************************************/
+
+$item-height: 60px;
+
+#sitlist {
+    /* TODO: Make sure this is the right color for this page */
+    background-color: #2ECC71;
+    /*padding: 0px 5px;*/
+    .sits-item {
+        border-bottom: 1px solid white;
+        height: $item-height;
+        padding: 0px 15px;
+        cursor: pointer;
+    }
+
+    .item-title {
+        font-size: 20px;
+        font-weight: light;
+        color: white;
+        line-height: $item-height !important;
+        vertical-align: middle;
+    }
+
+    .item-arrow {
+        font-size: 0.7em;
+        float: right;
+        color: white;
+        line-height: $item-height !important;
+        vertical-align: middle;
+    }
+}

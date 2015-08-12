@@ -1,0 +1,42 @@
+/*****************************************************************************/
+/* Checkin: Style */
+/*****************************************************************************/
+
+#checkin {
+    /* TODO: Add white gradient*/
+    background-color: #DB5C5C;
+
+    h1, p {
+        color: white;
+    }
+
+    .checkin-content {
+        display: none;
+        &:first-child {
+            margin-top: 0px;
+
+            p { margin-top: 0px; }
+        }
+        margin-top: 25px;
+        text-align: left;
+
+        .checkin-header {
+            text-align: center;
+            font-size: 18px;
+            color: #FFE1E1;
+            margin: 20px 10px;
+        }
+
+        .checkin-line {
+            color: white;
+            display: block;
+            font-size: 22px;
+            text-align: center;
+            margin: 10px 0px;
+        }
+    }
+
+    .active {
+        display: block;
+    }
+}

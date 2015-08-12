@@ -1,0 +1,36 @@
+/*****************************************************************************/
+/* LanguageSelect: Style */
+/*****************************************************************************/
+$nav-height: 50px;
+
+#language-select {
+    display: table;
+
+    .bg {
+        background-color: #359CD8;
+        height: 100%;
+        width: 100%; 
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .btn-container {
+            .btn {
+                height: 50px;
+                font-size: 17px;
+            }
+            .btn, img {
+                display: block;
+                margin: 30px auto;
+            }
+
+            img {
+                height: 200px;
+            }
+
+            #english-btn { background-color: #4A5054; }
+            #spanish-btn { background-color: #C96565; }
+        }
+    }
+    
+}

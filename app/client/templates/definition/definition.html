@@ -1,0 +1,11 @@
+<template name="Definition">
+    <div id='definition' class="content-container">
+        <!-- <p class='definition-header'>What is Mindfulness?</p>    -->
+        <img src="images/definition.png" class="content-img">
+        <p class='definition-content'>
+            {{#with definition}}
+                {{content}}
+            {{/with}}
+        </p>
+    </div>
+</template>

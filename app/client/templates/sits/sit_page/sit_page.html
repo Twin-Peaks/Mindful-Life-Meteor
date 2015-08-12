@@ -1,0 +1,35 @@
+<template name="SitPage">
+  <div class="sit-page content-container">
+
+    <!-- Static -->
+    <p class='subheader'>Lesson</p>
+    <!-- Dyanmic -->
+
+    <p class='title'>{{sitName}}</p>
+    <!-- Static -->
+    <p class='subheader'>With</p>
+    <!-- Dyanmic -->
+    <p class='author'></p>
+
+    <div id='audio-player'> 
+        <div>
+            <span id='back' class='glyphicon glyphicon-step-backward col-xs-4'></span>
+            <span id='toggle' class='glyphicon glyphicon-play col-xs-4'></span>
+            <span id='next' class='glyphicon glyphicon-step-forward col-xs-4'></span>
+        </div>
+    </div>
+    <div id='bottom-list'>
+
+    {{#with sitList}}
+        {{#each sits}}
+            <div class='sits-item' data-src="{{src}}" data-author="{{author}}">
+                <span class='item-title'>{{author}}</span>
+            </div>
+        {{/each}}
+    {{/with}}    
+    
+    </div>
+  </div>
+  <audio class="audio-player" webkit-playsinline></audio>
+
+</template>

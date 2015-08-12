@@ -1,0 +1,42 @@
+<template name="Checkin">
+    <div id='checkin' class="content-container">
+        <img src="images/checkin.png" class="content-img">
+        {{#HammerTouchArea gestureMap=templateGestures}}
+            <div class="checkin-content active">
+                {{#with content1}}
+                    <p class='checkin-header'>{{header}}</p>
+                    {{#each lines}}
+                        <p class='checkin-line'>{{line}}</p>
+                    {{/each}}
+                {{/with}}    
+            </div> 
+        {{/HammerTouchArea}}
+        <div class="checkin-content">
+            {{#with content2}}
+                <p class='checkin-header'>{{header}}</p>
+                {{#each lines}}
+                    <p class='checkin-line'>{{line}}</p>
+                {{/each}}
+            {{/with}}    
+        </div>   
+
+        <div class="checkin-content">
+            {{#with content3}}
+                <p class='checkin-header'>{{header}}</p>
+                {{#each lines}}
+                    <p class='checkin-line'>{{line}}</p>
+                {{/each}}
+            {{/with}}    
+        </div>  
+
+
+        <div class="checkin-content">
+            {{#with content4}}
+                <p class='checkin-header'>{{header}}</p>
+                {{#each lines}}
+                    <p class='checkin-line'>{{line}}</p>
+                {{/each}}
+            {{/with}}    
+        </div>        
+    </div>
+</template>

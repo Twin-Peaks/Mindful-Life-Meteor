@@ -1,0 +1,14 @@
+<template name="Sitlist">
+<!-- TODO: autogenerate the list based on either database info or downloaded videos -->
+    <div id='sitlist' class="content-container">
+        <div>
+            {{#each sitList}}
+                <div class='sits-item' data-name="{{this}}">
+                    <span class='item-title'>{{this}}</span>
+                    <span class='glyphicon glyphicon-chevron-right item-arrow'></span>
+                </div>
+            {{/each}}
+        </div>
+    
+    </div>
+</template>
