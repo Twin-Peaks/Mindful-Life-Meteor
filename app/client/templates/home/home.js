@@ -3,15 +3,19 @@
 /*****************************************************************************/
 Template.Home.events({
 
-    "click #checkin-btn": function() {
+    "click #checkin-btn": function(e) {
+        e.preventDefault();
+        // Router.go(e.currentTarget.href);
         Router.go("/checkin");
     },
 
-    "click #sits-btn": function() {
+    "click #sits-btn": function(e) {
+        e.preventDefault();
         Router.go("/sits");
     },
 
-    "click #def-btn": function() {
+    "click #def-btn": function(e) {
+        e.preventDefault();
         Router.go("/definition");
     }
 });
@@ -24,14 +28,14 @@ Template.Home.helpers({
         if(Session.get('language') == 'spanish') {
             return "Antes de Empezar";
         } else {
-            return "Checkin"
+            return "Mindful Check-in"
         }
     }, 
     sits: function() {
         if(Session.get('language') == 'spanish') {
             return "Practica de Atencion Plena ";
         } else {
-            return "Sits"
+            return "Mindful Sits"
         }
     }, 
     definition1: function() {
@@ -58,7 +62,9 @@ Template.Home.onCreated(function () {
 });
 
 Template.Home.onRendered(function () {
-    $('#header').css('background-color', '#3B87CC');
+    $('.home-btn').css('visibility', 'hidden');
+    $('#header-title').text("Mindful Life");
+    $('#header').css('background-color', '#163850');
 });
 
 Template.Home.onDestroyed(function () {

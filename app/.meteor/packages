@@ -12,3 +12,5 @@ fourseven:scss
 materialize:materialize
 twbs:bootstrap
 chriswessels:hammer
+swiper:swiper
+fastclick

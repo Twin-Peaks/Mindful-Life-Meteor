@@ -2,10 +2,26 @@
     <div id='definition' class="content-container">
         <!-- <p class='definition-header'>What is Mindfulness?</p>    -->
         <img src="images/definition.png" class="content-img">
+        <h1 class="content-header">What is Mindfulness?</h1>
         <p class='definition-content'>
             {{#with definition}}
                 {{content}}
             {{/with}}
         </p>
+        <h1 class="content-header">Benefits</h1>
+        <p class='definition-content'>
+            {{#with benefits1}}
+                {{content}}
+            {{/with}}
+        </p>
+        <img src="images/clouds.png" class="clouds-img">
+        <br>
+        <br>
+        <p class='definition-content'>
+            {{#with benefits2}}
+                {{content}}
+            {{/with}}
+        </p>
+        
     </div>
 </template>

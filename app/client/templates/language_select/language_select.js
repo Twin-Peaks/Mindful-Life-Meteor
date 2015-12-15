@@ -26,6 +26,8 @@ Template.LanguageSelect.onCreated(function () {
 });
 
 Template.LanguageSelect.onRendered(function () {
+    $('.home-btn').css('visibility', 'visible');
+    $('#header-title').text("Select Language");
     $('#header').css('background-color', '#359CD8');
 });
 

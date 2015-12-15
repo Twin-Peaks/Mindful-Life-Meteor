@@ -16,7 +16,13 @@ Template.Sitlist.events({
 /*****************************************************************************/
 Template.Sitlist.helpers({
     sitList: function() {
-        var content = English.findOne({page: "all_sits"}); 
+        var content = {}; 
+        if(Session.get('language') == 'spanish') {
+            content = Spanish.findOne({page: "all_sits"}); 
+        } else {
+            content = English.findOne({page: "all_sits"}); 
+        }
+        
         var sit_list = content.list;
         return sit_list;
     }
@@ -29,7 +35,9 @@ Template.Sitlist.onCreated(function () {
 });
 
 Template.Sitlist.onRendered(function () {
+    $('.home-btn').css('visibility', 'visible');
     $('#header').css('background-color', '#2ECC71');
+    $('#header-title').text('Mindful Sits');
 });
 
 Template.Sitlist.onDestroyed(function () {

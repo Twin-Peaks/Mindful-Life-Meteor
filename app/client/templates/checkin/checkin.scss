@@ -1,24 +1,37 @@
 /*****************************************************************************/
 /* Checkin: Style */
 /*****************************************************************************/
-
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}      
 #checkin {
     /* TODO: Add white gradient*/
     background-color: #DB5C5C;
-
+    .checkin-arrow {
+        display: block;
+        margin: 5px auto;
+        margin-top: 30px;
+        color: #FFC3C3;
+        font-size: 15px;
+        text-align: center;
+    }
     h1, p {
         color: white;
     }
 
-    .checkin-content {
-        display: none;
-        &:first-child {
-            margin-top: 0px;
-
-            p { margin-top: 0px; }
+    &.swiper-container {
+        height: auto;
+        
+        .swiper-pagination-bullet-active {
+            background: white;
         }
-        margin-top: 25px;
+    }
+
+    .checkin-content {
+        margin-top: 5px;
         text-align: left;
+        padding-bottom: 50px;
 
         .checkin-header {
             text-align: center;
@@ -36,7 +49,30 @@
         }
     }
 
-    .active {
+    .swipe {
+        color: #8C2D2D;
         display: block;
+        text-align: center;
+        span {
+            font-size: 13px;
+        }
+    }
+
+    .dots-group {
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .dots {
+        display: inline-block;
+        height: 8px;
+        width: 8px;
+        margin: 3px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-color: #FF8F8F;
+        &.active {
+            background-color: white;
+        }
     }
 }

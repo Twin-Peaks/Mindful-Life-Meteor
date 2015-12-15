@@ -6,12 +6,56 @@ nav {
 
 #header {
     background-color: #3B87CC;
+    .home-btn {
+        line-height: $nav-height;
+        font-size: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        cursor: pointer;
+        margin-top: 5px;
 
+    }
+    .side-item {
+        &:hover {
+            background-color: transparent;
+            a {
+                color: black;
+            }
+        }
+    }
+
+
+    .side-nav {
+        background-color: #519CDF;
+
+        .sidebar-logo {
+
+            text-align: center;
+            margin: 25px 0px;
+            margin-top: 75px;
+            margin-bottom: 25px;
+            height: 175px;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        a {
+            color: white;
+            font-size: 20px;
+        }
+    }
     .brand-logo {
         text-decoration: none;
         line-height: $nav-height;
         color: white !important;
         cursor: pointer;
+        margin-top: 5px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
         &:focus {
             color: white;
         }        
@@ -29,6 +73,7 @@ nav {
             font-size: 20px;
             margin-right: 15px;
             line-height: $nav-height;
+            margin-top: 5px;
         }
     }
 

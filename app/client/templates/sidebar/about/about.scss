@@ -2,4 +2,29 @@
 /* About: Style */
 /*****************************************************************************/
 .about {
+    background-color: #519CDF;
+
+    .about-img {
+        display: block;
+        margin: 0px auto;
+        height: 200px;
+    }
+
+    .about-content {
+        font-size: 19px;
+        text-align: left;
+        font-weight: 100;
+        margin-top: 50px;
+        color: white;   
+        padding: 0px 15px;
+        padding-bottom: 50px;
+
+        a {
+            margin-top: 25px;
+            color: #B8DEFF;
+            text-decoration: underline !important;
+            display: block;
+        }
+    }
 }
+

@@ -55,6 +55,11 @@
                 color: white;
                 font-size: 25px;
                 vertical-align: middle;
+
+                .btn-arrow {
+                    position: static;
+                    float: right;
+                }
             }    
         }
         
@@ -62,11 +67,11 @@
 
     #checkin-btn { background-color: #DB5C5C };
     #sits-btn { background-color: #2ECC71 };
-    #def-btn { background-color: #F0C418 };
+    #def-btn { background-color: #49A5F9 };
 
     #checkin-btn .triangle { border-top: 80px solid #B83A3A };
     #sits-btn .triangle { border-top: 80px solid #41AB3E };
-    #def-btn .triangle { border-top: 80px solid #ADA000 };
+    #def-btn .triangle { border-top: 80px solid #3B87CC };
 
     .btn-text {
         color: white;

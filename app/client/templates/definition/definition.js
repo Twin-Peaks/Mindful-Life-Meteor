@@ -38,6 +38,24 @@ Template.Definition.helpers({
         }
         return content;
     },
+    benefits1: function() {
+        var content = {};
+        if(Session.get('language') == 'spanish') {
+            content = Spanish.findOne({page: 'benefits1'});    
+        } else {
+            content = English.findOne({page: 'benefits1'});
+        }
+        return content;
+    }, 
+    benefits2: function() {
+        var content = {};
+        if(Session.get('language') == 'spanish') {
+            content = Spanish.findOne({page: 'benefits2'});    
+        } else {
+            content = English.findOne({page: 'benefits2'});
+        }
+        return content;
+    }
 });
 
 /*****************************************************************************/
@@ -47,7 +65,9 @@ Template.Definition.onCreated(function () {
 });
 
 Template.Definition.onRendered(function () {
-    $('#header').css('background-color', '#F0C418');
+    $('.home-btn').css('visibility', 'visible');
+    $('#header-title').text("Definition");
+    $('#header').css('background-color', '#49A5F9');
 });
 
 Template.Definition.onDestroyed(function () {

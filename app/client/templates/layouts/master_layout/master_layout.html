@@ -2,19 +2,18 @@
     <nav>
         <div id='header' class="nav-wrapper">   
             <!-- {{#linkTo route="home"}}<span class='glyphicon glyphicon-home' id='home-btn'></span>{{/linkTo}} -->
+            <span class="glyphicon glyphicon-home home-btn"></span>
             <span class='brand-logo' id='header-title'>Mindful Life</span>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="glyphicon glyphicon-menu-hamburger" id='sidebar-btn'></i></a>
-            <ul class="right hide-on-med-and-down">
-                <li class='side-item'><a href="sass.html">Sass</a></li>
-                <li class='side-item'><a href="badges.html">Components</a></li>
-                <li class='side-item'><a href="collapsible.html">Javascript</a></li>
-                <li class='side-item'><a href="mobile.html">Mobile</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li class='side-item'><a href="{{pathFor 'resources'}}">Resources</a></li>
+            <span href="#" data-activates="mobile-demo" class="button-collapse"><i class="glyphicon glyphicon-menu-hamburger" id='sidebar-btn'></i></span>
+      <!--       <ul class="right hide-on-med-and-down">
                 <li class='side-item'><a href="{{pathFor 'about'}}">About</a></li>
-                <li class='side-item'><a>Share App</a></li>
-                <li class='side-item'><a href="{{pathFor 'donate'}}">Donate</a></li>
+                <li class='side-item'><a href="#" onclick="window.open('https://www.razoo.com/story/Mindful-Life-Project?referral_code=share', '_system');">Donate Page</a></li>
+                <li class='side-item'><a href="{{pathFor 'language_select'}}">Language/Idioma</a></li>
+            </ul> -->
+            <ul class="side-nav" id="mobile-demo">
+                <li class="sidebar-logo"><img src="images/logo-white.png"></li>
+                <li class='side-item'><a href="{{pathFor 'about'}}">About</a></li>
+                <li class='side-item'><a href="#" onclick="window.open('https://www.razoo.com/story/Mindful-Life-Project?referral_code=share', '_system');">Donate Page</a></li>
                 <li class='side-item'><a href="{{pathFor 'language_select'}}">Language/Idioma</a></li>
             </ul>
         </div>

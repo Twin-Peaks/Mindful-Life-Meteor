@@ -1,5 +1,11 @@
 <template name="About">
-  <div class="about">
-    <h1>Find me in app/client/templates/sidebar/about/about</h1>
+  <div class="about content-container">
+    <img class="about-img" src="images/logo-white.png">
+    <p class="about-content">
+        {{#with about}}
+            {{content}}
+        {{/with}}
+        <a href="#" onclick="window.open('http://mindfullifeproject.org/our-team', '_system');">Learn more about our team</a>
+    </p>
   </div>
 </template>

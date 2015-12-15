@@ -2,7 +2,12 @@ Template.MasterLayout.helpers({
 });
 
 Template.MasterLayout.events({
-    'click .brand-logo': function() {
+    'click .brand-logo': function(e) {
+        e.preventDefault();
+        Router.go("/home");
+    }, 
+    'click .home-btn': function(e) {
+        e.preventDefault();
         Router.go("/home");
     }
 });

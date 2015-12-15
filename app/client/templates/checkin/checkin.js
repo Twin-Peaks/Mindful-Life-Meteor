@@ -30,24 +30,9 @@ Template.Checkin.events({
 /* Checkin: Helpers */
 /*****************************************************************************/
 Template.Checkin.helpers({
-    templateGestures: {
-        'swipeleft .checkin-content': function (event, templateInstance) {
-            var num = Session.get('checkin_num');
-            if(num == 4) {
-                Session.set("checkin_num", 1);
-            } else {
-                num += 1;
-                Session.set("checkin_num", num);
-            }
-
-            var content = getCheckinContent('checkin' + num);
-            Session.set("checkin_content", content)
-        }
-    },
-
     content1: function() {
         var content = getCheckinContent('checkin1');
-        return Session.get("checkin_content");
+        return content;
     },
 
     content2: function() {
@@ -70,9 +55,22 @@ Template.Checkin.helpers({
 /* Checkin: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Checkin.onCreated(function () {
+
 });
 
 Template.Checkin.onRendered(function () {
+    $('.home-btn').css('visibility', 'visible');
+    $('#header-title').text("Check-in");
+    var swiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        
+        // If we need pagination
+        pagination: '.swiper-pagination'
+    
+    })        
+
     $('#header').css('background-color', '#DB5C5C');
     Session.set("checkin_num", 1);
     var content = getCheckinContent('checkin1');

@@ -2,4 +2,17 @@
 /* Donate: Style */
 /*****************************************************************************/
 .donate {
+    background-color: #519CDF;
+
+    .donate-btn {
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border-color: #519CDF;
+        color: #519CDF;
+        font-size: 20px;
+        display: block;
+        margin: 0px auto;
+        width: 200px;
+    }
 }

@@ -1,8 +1,9 @@
 <template name="Checkin">
-    <div id='checkin' class="content-container">
+    <div id='checkin' class="content-container swiper-container">
         <img src="images/checkin.png" class="content-img">
-        {{#HammerTouchArea gestureMap=templateGestures}}
-            <div class="checkin-content active">
+        <span class="checkin-arrow glyphicon glyphicon-arrow-right"></span>
+        <div class="swiper-wrapper">
+            <div class="checkin-content swiper-slide">
                 {{#with content1}}
                     <p class='checkin-header'>{{header}}</p>
                     {{#each lines}}
@@ -10,33 +11,45 @@
                     {{/each}}
                 {{/with}}    
             </div> 
-        {{/HammerTouchArea}}
-        <div class="checkin-content">
-            {{#with content2}}
-                <p class='checkin-header'>{{header}}</p>
-                {{#each lines}}
-                    <p class='checkin-line'>{{line}}</p>
-                {{/each}}
-            {{/with}}    
-        </div>   
 
-        <div class="checkin-content">
-            {{#with content3}}
-                <p class='checkin-header'>{{header}}</p>
-                {{#each lines}}
-                    <p class='checkin-line'>{{line}}</p>
-                {{/each}}
-            {{/with}}    
-        </div>  
+            <div class="checkin-content swiper-slide">
+                {{#with content2}}
+                    <p class='checkin-header'>{{header}}</p>
+                    {{#each lines}}
+                        <p class='checkin-line'>{{line}}</p>
+                    {{/each}}
+                {{/with}}    
+            </div> 
 
+            <div class="checkin-content swiper-slide">
+                {{#with content3}}
+                    <p class='checkin-header'>{{header}}</p>
+                    {{#each lines}}
+                        <p class='checkin-line'>{{line}}</p>
+                    {{/each}}
+                {{/with}}    
+            </div> 
 
-        <div class="checkin-content">
-            {{#with content4}}
-                <p class='checkin-header'>{{header}}</p>
-                {{#each lines}}
-                    <p class='checkin-line'>{{line}}</p>
-                {{/each}}
-            {{/with}}    
-        </div>        
+            <div class="checkin-content swiper-slide">
+                {{#with content4}}
+                    <p class='checkin-header'>{{header}}</p>
+                    {{#each lines}}
+                        <p class='checkin-line'>{{line}}</p>
+                    {{/each}}
+                {{/with}}    
+
+            </div> 
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+        
+ <!--        <div class="dots-group">
+            <div id="dot1" class="dots active"></div>
+            <div id="dot2" class="dots"></div>
+            <div id="dot3" class="dots"></div>
+            <div id="dot4" class="dots"></div>
+        </div>
+        <span class="swipe">Swipe left</span>   -->      
     </div>
 </template>

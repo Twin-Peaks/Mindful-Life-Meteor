@@ -1,5 +1,21 @@
 English = new Mongo.Collection('english', {connection: null});
 
+var about = 
+{
+    page: "about", 
+    content: "Mindful Life Project began teaching mindfulness in Richmond, CA elementary schools in October of 2012 working with 150 students. Now, Mindful Life Project works with thousands of students and teachers in underserved schools. Mindful Life Project's mission is to empower children through mindfulness, yoga, expressive arts and performing arts to gain self-awareness, confidence, self-regulation and resilience, leading to lifelong success."
+}
+
+var benefits1 = {
+    page: "benefits1",
+    content: "Mindfulness is a secular, science-based approach that takes advantage of our brain's plasticity (ability to change throughout life). Mindfulness is proven to strengthen physiological responses to stress, negative emotions, anxiety and depression, and improve happiness, openness and self-awareness."
+}
+
+var benefits2 = {
+    page: "benefits2",
+    content: "Mindfulness enables us to be present, moment to moment, in our increasingly distracted lives. Mindfulness improves social relationships with people and family and can even strengthen the immune system. It cultivates an openness to one's life experience and a leads to a happier and more compassionate life. "
+}
+
 var checkin1 = 
 {
     page: "checkin1", 
@@ -65,29 +81,69 @@ var benefits =
 
 var all_sits = {
     page: 'all_sits', 
-    list: ["Anchor Spot", "Counting Breath", "Heartfulness", "Body Scan"]
+    list: ["Anchor Spot", "Anchor Words", "Body Scan", "Counting Breath", "Heartfulness", "Mindful Breathing", "Mindful Emotions", "Mindful Gratitude", "Mindful Listening", "Mindful Thinking"]
 }
-
 
 var sit_list1 = {
     page: "Anchor Spot", 
-    sits: [ {author: "Coco", src: "/audio/CocoAnchorSpot.aac"}, {author: "JG", src: "/audio/JGAnchorspot.aac"}]
+    sits: [ {src_id: "219900201"}, {src_id: "219900323"} ,{src_id: "219900656"}, {src_id: "219900907"}, {src_id: "219901323"}, {src_id: "219901481"}]
 }
 
 var sit_list2 = {
-    page: "Counting Breath", 
-    sits: [ {author: "Coco", src: "audio/CocoCountingBreath.aac"}, {author: "Jason", src: "audio/JGSpanishCountingBreath.aac"}]
+    page: "Anchor Words", 
+    sits: [ {src_id: "219900198"}, {src_id: "219900349"}, {src_id: "219900890"}, {src_id: "219901468"}]
 }
 
+
+
 var sit_list3 = {
-    page: "Heartfulness", 
-    sits: [ {author: "Coco", src: "audio/CocoHeartfulness.aac"}, {author: "Jason", src: "audio/JGSpanishHeartfulness.aac"}]
+    page: "Body Scan", 
+    sits: [ {src_id: "219900193"}, {src_id: "219900353"}, {src_id: "219900920"}, {src_id: "219901191"}, {src_id: "219901326"}]
 }
 
 var sit_list4 = {
-    page: "Body Scan", 
-    sits: [ {author: "Coco", src: "audio/CocoMindfulBodyScan.aac"}, {author: "Jason", src: "audio/JGMindfulBodyScan.aac"}]
+    page: "Counting Breath", 
+    sits: [ {src_id: "219900255"}, {src_id: "219900491"}, {src_id: "219900639"}, {src_id: "219901532"}]
 }
+
+
+var sit_list5 = {
+    page: "Heartfulness", 
+    sits: [ {src_id: "219900189"}, {src_id: "219900528"}, {src_id: "219900665"}, {src_id: "219901424"}]
+}
+
+
+var sit_list6 = {
+    page: "Mindful Breathing", 
+    sits: [{src_id: "219900239"}, {src_id: "219900486"}, {src_id: "219901027"}, {src_id: "219901449"} ]
+}
+
+
+var sit_list7 = {
+    page: "Mindful Emotions", 
+    sits: [{src_id: "219900242"}, {src_id: "219900763"}]
+}
+
+
+var sit_list8 = {
+    page: "Mindful Gratitude", 
+    sits: [{src_id: "219900252"}, {src_id: "219900785"}, {src_id: "219901024"}]
+}
+
+
+var sit_list9 = {
+    page: "Mindful Listening", 
+    sits: [{src_id: "219900345"}, {src_id: "219900475"}, {src_id: "219900776"}, {src_id: "219901012"}, {src_id: "219901245"}, {src_id: "219901453"}]
+}
+
+
+
+var sit_list10 = {
+    page: "Mindful Thinking", 
+    sits: [{src_id: "219900315"}, {src_id: "219900652"}, {src_id: "219900791"}]
+}
+
+
 // var sit_list3 = {
 //     page: "Heartfulness", 
 //     sits: [ {author: "Coco", src: "audio/CocoHeartfulness.aac"}, {author: "Jason", src: "audio/JGSpanishHeartfulness.aac"}]
@@ -105,12 +161,15 @@ var sit_list4 = {
 //     sits: [ {author: "Coco", src: "audio/CocoHeartfulness.aac"}, {author: "Jason", src: "audio/JGSpanishHeartfulness.aac"}]
 // }
 
+
+English.insert(about)
 English.insert(checkin1)
 English.insert(checkin2)
 English.insert(checkin3)
 English.insert(checkin4)
 English.insert(definition)
-English.insert(benefits)
+English.insert(benefits1)
+English.insert(benefits2)
 
 /* Sits */
 English.insert(all_sits);
@@ -118,3 +177,9 @@ English.insert(sit_list1);
 English.insert(sit_list2);
 English.insert(sit_list3);
 English.insert(sit_list4);
+English.insert(sit_list5);
+English.insert(sit_list6);
+English.insert(sit_list7);
+English.insert(sit_list8);
+English.insert(sit_list9);
+English.insert(sit_list10);
